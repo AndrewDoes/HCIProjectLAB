@@ -1,0 +1,425 @@
+@import url('https://fonts.cdnfonts.com/css/architects-daughter');
+@import url('https://fonts.cdnfonts.com/css/inria-sans');
+@import url('https://fonts.cdnfonts.com/css/koh-santepheap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    width: 100vw;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.banner {
+    padding: 12.5vh 0;
+    position: relative;
+    background-image: url('Assets/bgHome.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    /* height: 100vh; */
+    height: auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: rgb(0, 0, 0, 0.8);
+    left: 0;
+    z-index: -1;
+}
+
+
+.banner .fill {
+    margin: auto;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.banner .fill h1 {
+    font-size: 40px;
+    color: #F08913;
+    font-family: 'Architects Daughter', sans-serif;
+
+}
+
+.banner .fill h2 {
+    font-family: 'Inria Sans', sans-serif;
+    color: #F2A258;
+    font-size: 36px;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.banner .fill #button {
+    padding: 1.5vh 2vw;
+    background-color: #F08913;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    /* margin-top: 5vh; */
+    margin-bottom: 7vh;
+    transition: all 0.5s ease;
+}
+
+.banner .fill #button:hover {
+    background-color: #5c380f;
+    border: 2px solid #fff;
+    font-size: 24px;
+}
+
+
+.banner .fill img {
+    height: auto;
+    width: 8vw;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+}
+
+.banner .fill img:hover {
+
+    width: 9vw;
+}
+
+.container {
+    width: 100vw;
+    height: auto;
+    background-color: #6E655D;
+}
+
+.container .About-us {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.About-us .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 0;
+}
+
+.About-us .img {
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    margin: 0 0 5vh 0;
+}
+
+.About-us img {
+    width: 200px;
+    height: auto;
+}
+
+.text {
+    max-width: 50%;
+}
+
+.About-us h3 {
+    color: #FFF;
+    font-size: 28px;
+    font-family: 'Inria Sans';
+    font-weight: 100;
+    /* margin-right: 5dvw; */
+}
+
+.title {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #311B0A;
+    border: 6px solid #271515;
+    color: #FFF;
+    padding: 2vw 0;
+    font-family: 'Inria Sans';
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: 100;
+}
+
+.promo {
+    background-image: url('Assets/wall.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 5vh; */
+    padding: 5vh 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+}
+
+.promo::before{
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    content: '';
+    z-index: -1;
+    background-color: rgb(0, 0, 0, 0.5);
+   
+}
+
+.promo .title {
+    margin-bottom: 5vh;
+}
+
+.container-promo {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    width: 80vw;
+    /* margin-bottom: 5vh; */
+    overflow: hidden;
+    border: 2px solid #311B0A;
+}
+
+.promo .promo-carousel {
+    position: relative;
+    width: 400%;
+    background-color: transparent;
+    padding: 0;
+    height: 25vw;
+    margin-left: 0vw;
+    display: flex;
+    align-items: center;
+    overflow : hidden;
+    transition: margin-left 0.5s ease;
+}
+
+.promo .promo-navigation {
+    border-radius: 0 0 15px 15px;
+    width: 80vw;
+    margin: 0;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #311B0A;
+    /* margin-top: 25vw; */
+}
+
+.promo-navigation .button-container {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo-navigation .button-container button {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+}
+
+.navigation.active {
+    background-color: #2a2727;
+}
+
+.promo-carousel .slide{
+    transition: margin-left 1s left;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 80vw;
+    /* height: 30vw; */
+    border-radius: 15px 15px 0 0;
+    background-repeat: no-repeat;
+}
+
+.promo .slide img{
+    width: 80vw;
+    /* height: 30vw; */
+    object-fit: cover;
+    object-position: center center;
+}
+
+.promo .first img{
+    width: 80vw;
+    /* height: 30vw; */
+    object-fit: cover;
+    object-position: center center;
+}
+
+#slide1 {
+    margin-left: 0;
+}
+
+#slide2 {
+    margin-left: 80vw;
+}
+
+#slide3 {
+    margin-left: 160vw;
+}
+
+.fill {
+    width: 100vw;
+    display: flex;
+    height: auto;
+}
+
+.fill .recom-fill {
+    position: relative;
+    width: 33.3vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.recom-fill::before {
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 33.3vw;
+    height: 100%;
+    content: '';
+    z-index: -1;
+}
+
+.fill .recom-fill .desc {
+    transition: opacity 0.5s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 10vh 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    opacity: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.recom-fill:hover>.desc {
+    opacity: 1;
+}
+
+.desc h2 {
+    color: #FFF;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 40px;
+    margin-bottom: 5vh;
+}
+
+.desc p {
+    color: #FFF;
+    font-family: 'Inria Sans';
+    font-size: 20px;
+    font-weight: 100;
+    width: 60%;
+}
+
+#recom1 {
+    background-image: url('Assets/familyGathering.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+#recom2 {
+    background-image: url('Assets/Asian Delights.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+#recom3 {
+    background-image: url('Assets/CorporateEvents.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+@media screen and (max-width: 768px) {
+    .banner .fill {
+        margin-top: 5vh;
+        text-align: left;
+    }
+
+    .banner{
+        height: 120vh;
+    }
+
+    .banner .fill h1{
+        font-size: 24px;
+    }
+
+    .banner .fill h2{
+        font-size: 28px;
+    }
+
+    .banner .fill #button{
+        font-size: 20px;
+    }
+
+    .banner .fill img{
+        width: 12vw;
+    }
+
+    .fill .recom-fill {
+        height: auto;
+    }
+
+    .fill .recom-fill .desc h2{
+        font-size: large;
+        margin-bottom: 0;
+    }
+
+    .fill .recom-fill .desc p{
+        height: 0;
+        overflow: hidden;
+    }
+
+    .fill .recom-fill .desc{
+        opacity: 1;
+        /* padding: 5vh 2vw; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0, 0, 0, 0.3);
+    }
+
+    .About-us h3{
+        font-size: small;
+
+    }
+
+    .About-us img{
+        width: 60%;
+    }
+}
