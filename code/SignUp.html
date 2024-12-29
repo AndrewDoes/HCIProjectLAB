@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+
+<body>
+
+    <div class="form-background">
+        <!-- <h1>Sign Up</h1> -->
+         <div class="form">
+            <h1>Sign Up</h1>
+             <form method="get">
+                <div class="wrap">
+                    <div class="form-fill">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="name...">
+                    </div>
+                    <div class="form-fill">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-fill">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender">
+                            <option value="default">Pick one</option>
+                            <option value="male" id="male">Male</option>
+                            <option value="female" id="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="wrap">
+                    <div class="form-fill">
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy">
+                    </div>
+                    <div class="form-fill">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="adress...">
+                    </div>
+                    
+                    <div class="form-fill">
+                       <label for="password">Password</label>
+                       <input type="password" id="password" name="password" placeholder="password...">
+                   </div>
+                </div>
+             </form>
+             <div class="checkbox">
+                <input type="checkbox" name="check" id="check">
+                <label for="check">I Accept The Terms And Conditions</label>
+             </div>
+             <p class="warning" id="warning"></p>
+             <div class="button">
+                <button type="button" onclick="returnBack()">Back</button>
+                <button type="button" onclick="validate()">Sign Up</button>
+            </div>
+            <div class="success" id="success">
+                <p>Sign Up Success!</p>
+                <p>Redirecting You Back Home in <span id="timer">5</span>s</p>
+            </div>
+         </div>
+    </div>
+
+
+</body>
+<!-- <script src="JS/Product.js"></script> -->
+<script src="JS/All.js"></script>
+<script src="JS/SignUp.js"></script>
+</html>
